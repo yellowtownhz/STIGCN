@@ -4,10 +4,8 @@ as described in the paper
 [Spatio-Temporal Inception Graph Convolutional Networks for Skeleton-Based
 Action Recognition](https://arxiv.org/abs/2011.13322).
 
-Block
 [![yK0610.png](https://s3.ax1x.com/2021/02/03/yK0610.png)](https://imgchr.com/i/yK0610)
 
-Framework
 [![yK0IhR.png](https://s3.ax1x.com/2021/02/03/yK0IhR.png)](https://imgchr.com/i/yK0IhR)
 
 STIGCN is an efficient and simple method for skeleton-based action recognition.
@@ -21,6 +19,9 @@ only 1/5 of the parameters and 1/10 of the FLOPs.
 ## Data Preparation
 For data preparation, please refer to
 [2s-AGCN](https://github.com/lshiwjx/2s-AGCN) for more details.
+
+## Pretrained Model
+We release our [model](https://drive.google.com/file/d/1r3TdFJcnTC3NOdo3GfIiXH8SKGrPCBOr/view?usp=sharing) on NTU-XSub benchmark.
 
 ## Training & Testing
 
