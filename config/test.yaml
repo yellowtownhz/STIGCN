@@ -1,0 +1,37 @@
+work_dir: ./logs/ntu-xsub
+processor: Classification
+phase: test
+weights: ./pretrained/ntu-xsub.pth.tar
+
+# feeder
+feeder: feeders.NTU
+train_feeder_args:
+  data_path: ./data/ntu/xsub/train_data_joint.npy
+  label_path: ./data/ntu/xsub/train_label.pkl
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: -1
+  normalization: False
+
+test_feeder_args:
+  data_path: ./data/ntu/xsub/test_data_joint.npy
+  label_path: ./data/ntu/xsub/test_label.pkl
+
+# model
+model: model.stigcn.Model
+model_args:
+  num_class: 60
+  num_point: 25
+  num_person: 2
+  graph: graph.ntu_rgb_d.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  layers: [3, 3, 3]
+  dropout: 0.5
+
+# training
+batch_size: 64
+test_batch_size: 64
+print_model: True
